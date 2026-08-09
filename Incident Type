@@ -1,0 +1,12 @@
+create database incident1;
+use incident1;
+create table incident1(incidenttype_id int,type_name varchar(50),descript varchar(255));
+insert into incident1 values(10011,'Phishing','Fraudulent emails or messages used to steal sensitive information or login credentials.');
+insert into incident1 values(10012,'Malware','Malicious software infects a computer or network and may damage or steal data.');
+insert into incident1 values(10013,'Ransomware','Malware that encrypts files and demands payment to restore access.');
+insert into incident1 values(10014,'Unauthorized Access','An unauthorized person gains access to a system, account or network.');
+insert into incident1 values(10015,'Data Breach','Sensitive or confidential information is accessed, exposed or stolen without authorization.');
+insert into incident1 values(10016,'Password Attack','An attacker attempts to obtain or bypass a users password.');
+insert into incident1 values(10017,'Cyberstalking','Repeated online harassment, monitoring or threatening behavior toward an individual.');
+insert into incident1 values(10018,'Insider Threat','An employee or authorized user misuses their access to compromise security.');
+select * from incident1;
