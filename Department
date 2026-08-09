@@ -1,0 +1,10 @@
+create database dept1;
+use dept1;
+create table dept1(deptid int primary key, deptname varchar(50));
+insert into dept1 values(101 , 'Cybercrime Investigation');
+insert into dept1 values(102,'Threat Intelligence');
+insert into dept1 values(103,'Digital Forensic Department');
+insert into dept1 values(104,'Cyber SCO');
+insert into dept1 values(105,'Incident Response');
+insert into dept1 values(106,'Cybercrime Prevention');
+select * from dept1; 
