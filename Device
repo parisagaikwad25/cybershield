@@ -1,0 +1,11 @@
+create database device1;
+use device1;
+create table device1(device_id int,device_name varchar(50),employee varchar(50),department varchar(50));
+insert into device1 values(1011,'Dell Laptop','Arav Shrama','Cyber SCO');
+insert into device1 values(1012,'HP Laptop','Priya Nair','Cyber SCO');
+insert into device1 values(1013,'MacBook Pro','Aditya Kulkarni','Digital Forensics');
+insert into device1 values(1014,'Window Server','Vikram Singh','Cyber SCO');
+insert into device1 values(1015,'MackBook Air','Meera Menon','Incident Response');
+insert into device1 values(1016,'Lenovo Laptop','Rahul Verma','Cybercrime Investigation');
+insert into device1 values(1017,'Dell Desktop','Kavya Iyer','Threat Intelligence');
+select * from device1;
