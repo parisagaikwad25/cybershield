@@ -1,0 +1,14 @@
+create database incident1;
+use incident1;
+create table Incident_Assignments(Assignment_id int PRIMARY KEY, incident_id int, Analyst_id int, Assignment_Date date);
+insert into Incident_Assignments values(301 , 5001, 2001, '2026-07-01');
+insert into Incident_Assignments values(302, 5002, 2006, '2026-07-03');
+insert into Incident_Assignments values(303, 5003, 2004, '2026-07-05');
+insert into Incident_Assignments values(304, 5004, 2002, '2026-07-08');
+insert into Incident_Assignments values(305, 5005, 2003, '2026-07-10');
+insert into Incident_Assignments values(306, 5006, 2002, '2026-07-13');
+insert into Incident_Assignments values(307, 5007, 2007, '2026-07-16');
+insert into Incident_Assignments values(308, 5008, 2003, '2026-07-18');
+insert into Incident_Assignments values(309, 5009, 2001, '2026-07-21');
+insert into Incident_Assignments values(310, 5010, 2004, '2026-07-22');
+select * from Incident_Assignments;
