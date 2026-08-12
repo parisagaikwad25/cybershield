@@ -1,0 +1,25 @@
+create database investigation;
+use investigation;
+create table investigation (Investigation_ID int PRIMARY KEY, Incident_ID int, Analyst_ID int, Investigation_Date date, Findings varchar(255));
+
+insert into investigation values(401, 5001, 2001, '2026-07-01', 'Email was confirmed as a phishing attempt designed to steal employee login credentials.');
+
+insert into investigation values(402, 5002, 2006, '2026-07-04', 'Malware was detected on the employee laptop and was identified as the source of suspicious system activity.');
+
+insert into investigation values(403, 5003, 2004, '2026-07-05', 'Ransomware was confirmed to have encrypted multiple files and displayed a ransom demand.');
+
+insert into investigation values(404, 5004, 2002, '2026-07-08', 'Login attempt was traced to an unauthorized source and the affected account credentials were secured.');
+
+insert into investigation values(405, 5005, 2003, '2026-07-11', 'Investigation confirmed unauthorized access to confidential employee information.');
+
+insert into investigation values(406, 5006, 2002, '2026-07-13', 'Multiple failed login attempts were detected and no successful unauthorized access was found.');
+
+insert into investigation values(407, 5007, 2007, '2026-07-16', 'The threatening messages were traced to a suspicious online account and the source was reported for further action.');
+
+insert into investigation values(408, 5008, 2003, '2026-07-18', 'The employee account showed suspicious access to restricted information and the activity is still being investigated.');
+
+insert into investigation values(409, 5009, 2001, '2026-07-21', 'The email attachment was confirmed to contain malicious content and the affected system was checked for further infection.');
+
+insert into investigation values(410, 5010, 2004, '2026-07-22', 'Ransomware activity was confirmed and several workstation files were found to be encrypted and inaccessible.');
+
+select * from investigation;
