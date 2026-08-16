@@ -43,11 +43,6 @@ insert into incidents values
 insert into incidents values
 (5010, 'Ransomware activity was detected on a workstation and several files became inaccessible.', '2026-07-22', 'Open', 010, 10013, 4, 1017);
 
-select * from incidents;
-create database analyst1;
-
-use analyst1;
-
 create table security_analysts(
     analyst_id int primary key,
     analyst_name varchar(50),
@@ -78,8 +73,6 @@ insert into security_analysts values
 insert into security_analysts values
 (2008, 'Karan Malhotra', 'karan.malhotra@example.com, 9801234567');
 
-select * from security_analysts;
-
 create table Incident_Assignments(Assignment_id int PRIMARY KEY, incident_id int, Analyst_id int, Assignment_Date date);
 insert into Incident_Assignments values(301 , 5001, 2001, '2026-07-01');
 insert into Incident_Assignments values(302, 5002, 2006, '2026-07-03');
@@ -92,4 +85,15 @@ insert into Incident_Assignments values(308, 5008, 2003, '2026-07-18');
 insert into Incident_Assignments values(309, 5009, 2001, '2026-07-21');
 insert into Incident_Assignments values(310, 5010, 2004, '2026-07-22');
 select * from Incident_Assignments;
+
+ALTER TABLE Incident_Assignments
+ADD CONSTRAINT fk_assignment_incident
+FOREIGN KEY (incident_id)
+REFERENCES incidents(incident_id);
+
+ALTER TABLE Incident_Assignments
+ADD CONSTRAINT fk_assignment_analyst
+FOREIGN KEY (analyst_id)
+REFERENCES  security_analysts (analyst_id);
+
 
