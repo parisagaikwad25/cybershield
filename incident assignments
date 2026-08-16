@@ -84,7 +84,6 @@ insert into Incident_Assignments values(307, 5007, 2007, '2026-07-16');
 insert into Incident_Assignments values(308, 5008, 2003, '2026-07-18');
 insert into Incident_Assignments values(309, 5009, 2001, '2026-07-21');
 insert into Incident_Assignments values(310, 5010, 2004, '2026-07-22');
-select * from Incident_Assignments;
 
 ALTER TABLE Incident_Assignments
 ADD CONSTRAINT fk_assignment_incident
@@ -118,8 +117,6 @@ insert into investigation values(409, 5009, 2001, '2026-07-21', 'The email attac
 
 insert into investigation values(410, 5010, 2004, '2026-07-22', 'Ransomware activity was confirmed and several workstation files were found to be encrypted and inaccessible.');
 
-select * from investigation;
-
 ALTER TABLE investigation
 ADD CONSTRAINT fk_investigation_incident
 FOREIGN KEY (incident_id)
@@ -129,4 +126,49 @@ ALTER TABLE investigation
 ADD CONSTRAINT fk_investigation_analyst
 FOREIGN KEY (analyst_id)
 REFERENCES security_analysts(analyst_id);
+
+CREATE TABLE Response_Actions(
+    Action_ID INT PRIMARY KEY,
+    Incident_ID INT NOT NULL,
+    Action_Description TEXT NOT NULL,
+    Action_Date DATE NOT NULL
+);
+INSERT INTO Response_Actions VALUES(501, 5001, 'Reset the employee password and blocked the suspicious sender.', '2026-07-01');
+INSERT INTO Response_Actions VALUES(502, 5002, 'Isolated the infected laptop and removed the detected malware.', '2026-07-04');
+INSERT INTO Response_Actions VALUES(503, 5003, 'Isolated the affected computer from the network to prevent ransomware spread.', '2026-07-05');
+INSERT INTO Response_Actions VALUES(504, 5003, 'Started recovery of encrypted files from available backups.', '2026-07-06');
+INSERT INTO Response_Actions VALUES(505, 5004, 'Secured the affected account and reset the user credentials.', '2026-07-08');
+INSERT INTO Response_Actions VALUES(506, 5005, 'Restricted access to the affected confidential information.', '2026-07-11');
+INSERT INTO Response_Actions VALUES(507, 5005, 'Reviewed access logs to identify unauthorized activity.', '2026-07-12');
+INSERT INTO Response_Actions VALUES(508, 5006, 'Temporarily locked the affected account and reset the password.', '2026-07-13');
+INSERT INTO Response_Actions VALUES(509, 5007, 'Reported the threatening account and preserved the relevant messages as evidence.', '2026-07-16');
+INSERT INTO Response_Actions VALUES(510, 5008, 'Restricted the employee account access to sensitive information.', '2026-07-18');
+INSERT INTO Response_Actions VALUES(511, 5008, 'Reviewed account activity and access logs for further unauthorized activity.', '2026-07-19');
+INSERT INTO Response_Actions VALUES(512, 5009, 'Blocked the malicious email attachment and scanned the affected system.', '2026-07-21');
+INSERT INTO Response_Actions VALUES(513, 5010, 'Isolated the ransomware-infected workstation from the network.', '2026-07-22');
+INSERT INTO Response_Actions VALUES(514, 5010, 'Started file recovery using available backups.', '2026-07-23');
+INSERT INTO Response_Actions VALUES(515, 5010, 'Blocked the identified ransomware activity and restricted affected network access.', '2026-07-23');
+
+ALTER TABLE Response_Actions
+ADD CONSTRAINT fk_response_incident
+FOREIGN KEY (incident_id)
+REFERENCES incidents(incident_id);
+
+SELECT
+    i.incident_id,
+    sa.analyst_name,
+    ia.assignment_date,
+    inv.investigation_date,
+    inv.findings,
+    ra.action_description,
+    ra.action_date
+FROM incidents i
+JOIN Incident_Assignments ia
+    ON i.incident_id = ia.incident_id
+JOIN security_analysts sa
+    ON ia.analyst_id = sa.analyst_id
+JOIN investigation inv
+    ON i.incident_id = inv.incident_id
+JOIN Response_Actions ra
+    ON i.incident_id = ra.incident_id;
 
