@@ -1,0 +1,7 @@
+CREATE TABLE Audit_Log (
+    log_id INT PRIMARY KEY,
+    employee_id INT NOT NULL,
+    action_performed VARCHAR(255) NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    incident_id INT NOT NULL
+);
