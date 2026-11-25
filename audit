@@ -5,4 +5,3 @@ CREATE TABLE Audit_Log (
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     incident_id INT NOT NULL
 );
---
