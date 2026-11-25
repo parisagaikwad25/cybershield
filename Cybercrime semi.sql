@@ -1,6 +1,6 @@
--- =========================================================
+
 -- CREATE DATABASE
--- =========================================================
+
 
 DROP DATABASE IF EXISTS cybercrime_management;
 
@@ -9,9 +9,9 @@ CREATE DATABASE cybercrime_management;
 USE cybercrime_management;
 
 
--- =========================================================
+
 -- 1. DEPARTMENT TABLE
--- =========================================================
+
 
 CREATE TABLE Department (
     dept_id INT PRIMARY KEY,
@@ -27,10 +27,10 @@ INSERT INTO Department (dept_id, dept_name) VALUES
 (106, 'Cybercrime Prevention');
 
 
--- =========================================================
+
 -- 2. CLIENT TABLE
 -- Clients are people who report cybercrime incidents
--- =========================================================
+
 
 CREATE TABLE Client (
     client_id INT PRIMARY KEY,
@@ -51,10 +51,10 @@ INSERT INTO Client (client_id, client_name, contact_details) VALUES
 (1010, 'Raj Malhotra', 'raj.malhotra@gmail.com');
 
 
--- =========================================================
+
 -- 3. SECURITY ANALYST TABLE
 -- Each analyst belongs to a department
--- =========================================================
+
 
 CREATE TABLE Security_Analyst (
     analyst_id INT PRIMARY KEY,
@@ -79,10 +79,10 @@ INSERT INTO Security_Analyst
 (2008, 'Karan Malhotra', 'karan.malhotra@example.com', 105);
 
 
--- =========================================================
+
 -- 4. DEVICE TABLE
 -- Devices are assigned to Security Analysts
--- =========================================================
+
 
 CREATE TABLE Device (
     device_id INT PRIMARY KEY,
@@ -105,9 +105,9 @@ INSERT INTO Device
 (1017, 'Dell Desktop', 2005);
 
 
--- =========================================================
+
 -- 5. INCIDENT TYPE TABLE
--- =========================================================
+
 
 CREATE TABLE Incident_Type (
     incident_type_id INT PRIMARY KEY,
@@ -142,9 +142,9 @@ INSERT INTO Incident_Type
  'An authorized user misuses their access to compromise security.');
 
 
--- =========================================================
+
 -- 6. SEVERITY LEVEL TABLE
--- =========================================================
+
 
 CREATE TABLE Severity_Level (
     severity_id INT PRIMARY KEY,
@@ -167,11 +167,11 @@ INSERT INTO Severity_Level
  'Severe security incident requiring immediate response.');
 
 
--- =========================================================
+
 -- 7. INCIDENT TABLE
 -- Client reports the incident
 -- Incident affects a device
--- =========================================================
+
 
 CREATE TABLE Incident (
     incident_id INT PRIMARY KEY,
@@ -268,10 +268,9 @@ VALUES
  1010, 10013, 4, 1017);
 
 
--- =========================================================
 -- 8. INCIDENT ASSIGNMENT TABLE
 -- Assigns an incident to a Security Analyst
--- =========================================================
+
 
 CREATE TABLE Incident_Assignment (
     assignment_id INT PRIMARY KEY,
@@ -303,10 +302,10 @@ INSERT INTO Incident_Assignment
 (310, 5010, 2004, '2026-07-22');
 
 
--- =========================================================
+
 -- 9. INVESTIGATION TABLE
 -- Analyst investigates the incident
--- =========================================================
+
 
 CREATE TABLE Investigation (
     investigation_id INT PRIMARY KEY,
@@ -359,9 +358,9 @@ INSERT INTO Investigation
  'Ransomware activity was confirmed and files were encrypted.');
 
 
--- =========================================================
+
 -- 10. RESPONSE ACTION TABLE
--- =========================================================
+
 
 CREATE TABLE Response_Action (
     action_id INT PRIMARY KEY,
@@ -438,10 +437,9 @@ INSERT INTO Response_Action
  '2026-07-23');
 
 
--- =========================================================
 -- 11. AUDIT LOG TABLE
 -- Records analyst activity and timestamp
--- =========================================================
+
 
 CREATE TABLE Audit_Log (
     log_id INT PRIMARY KEY,
@@ -505,9 +503,9 @@ VALUES
  5010);
 
 
--- =========================================================
+
 -- CHECK ALL TABLES
--- =========================================================
+
 
 SHOW TABLES;
 SELECT
