@@ -22,4 +22,4 @@ insert into investigation values(409, 5009, 2001, '2026-07-21', 'The email attac
 
 insert into investigation values(410, 5010, 2004, '2026-07-22', 'Ransomware activity was confirmed and several workstation files were found to be encrypted and inaccessible.');
 
-select * from investigation;
+select * from investigation;  
