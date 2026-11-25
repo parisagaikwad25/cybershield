@@ -1,5 +1,3 @@
-create database dept1;
-use dept1;
 create table dept1(deptid int primary key, deptname varchar(50));
 insert into dept1 values(101 , 'Cybercrime Investigation');
 insert into dept1 values(102,'Threat Intelligence');
