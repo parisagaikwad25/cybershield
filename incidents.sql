@@ -43,4 +43,4 @@ insert into incidents values
 insert into incidents values
 (5010, 'Ransomware activity was detected on a workstation and several files became inaccessible.', '2026-07-22', 'Open', 010, 10013, 4, 1017);
 
-select * from incidents;
+select * from incidents
