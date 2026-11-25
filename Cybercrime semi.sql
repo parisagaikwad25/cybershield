@@ -359,7 +359,7 @@ INSERT INTO Investigation
 
 
 
--- 10. RESPONSE ACTION TABLE
+-- 10. RESPONSE ACTION TABLE.
 
 
 CREATE TABLE Response_Action (
