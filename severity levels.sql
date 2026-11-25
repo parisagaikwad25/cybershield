@@ -7,7 +7,7 @@ INSERT INTO Severity_Levels VALUES(1, 'Low', 'Minor security incident with limit
 (2, 'Medium', 'Security incident that affects a limited number of users or systems.'),
 (3, 'High', 'Serious security incident that may cause significant damage or data loss.'),
 (4, 'Critical', 'Severe security incident requiring immediate response due to major impact on systems, data or operations.');
-SELECT * FROM Severity_Levels;
+SELECT * FROM Severity_Levels; 
 
 
 
