@@ -1,4 +1,4 @@
---
+
 create database action;
 use action;
 CREATE TABLE Response_Actions(
