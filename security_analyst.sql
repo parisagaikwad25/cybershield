@@ -1,4 +1,4 @@
-
+--
 CREATE DATABASE analyst1;
 USE analyst1;
 
