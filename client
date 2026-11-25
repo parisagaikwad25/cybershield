@@ -1,0 +1,16 @@
+CREATE TABLE Client (
+    client_id INT PRIMARY KEY,
+    client_name VARCHAR(100) NOT NULL,
+    contact_details VARCHAR(150)
+);
+INSERT INTO Client VALUES
+(1001, 'Riya Desai', 'riya.desai@gmail.com'),
+(1002, 'Aditya Joshi', 'aditya.joshi@gmail.com'),
+(1003, 'Snehal Patil', 'snehal.patil@gmail.com'),
+(1004, 'Manish Kulkarni', 'manish.kulkarni@gmail.com'),
+(1005, 'Pooja Shah', 'pooja.shah@gmail.com'),
+(1006, 'Nikhil Mehta', 'nikhil.mehta@gmail.com'),
+(1007, 'Tanvi Rao', 'tanvi.rao@gmail.com'),
+(1008, 'Omkar Deshmukh', 'omkar.deshmukh@gmail.com'),
+(1009, 'Neha Kapoor', 'neha.kapoor@gmail.com'),
+(1010, 'Raj Malhotra', 'raj.malhotra@gmail.com');
