@@ -1,4 +1,4 @@
---
+
 DROP DATABASE IF EXISTS cybercrime_management;
 
 CREATE DATABASE cybercrime_management;
