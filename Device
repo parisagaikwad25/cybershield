@@ -8,4 +8,4 @@ insert into device1 values(1014,'Window Server','Vikram Singh',104);
 insert into device1 values(1015,'MackBook Air','Meera Menon',105);
 insert into device1 values(1016,'Lenovo Laptop','Rahul Verma',101);
 insert into device1 values(1017,'Dell Desktop','Kavya Iyer',102);
-
+select * from device1;
