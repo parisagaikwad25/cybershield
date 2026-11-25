@@ -9,4 +9,4 @@ insert into incident1 values(10015,'Data Breach','Sensitive or confidential info
 insert into incident1 values(10016,'Password Attack','An attacker attempts to obtain or bypass a users password.');
 insert into incident1 values(10017,'Cyberstalking','Repeated online harassment, monitoring or threatening behavior toward an individual.');
 insert into incident1 values(10018,'Insider Threat','An employee or authorized user misuses their access to compromise security.');
-select * from incident1;
+
